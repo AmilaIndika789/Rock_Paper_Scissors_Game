@@ -1,5 +1,6 @@
 import mock
 import builtins
+from io import StringIO
 import sys
 sys.path.append("../src")
 print(sys.path)
@@ -29,6 +30,20 @@ def test_is_equal():
     assert is_equal(0, 2) == False
     assert is_equal(1, 2) == False
 
+def test_is_invalid():
+    assert is_invalid(0) == False
+    assert is_invalid(1) == False
+    assert is_invalid(2) == False
+    assert is_invalid(242) == True
+    assert is_invalid(-5) == True
+
+def test_get_user_choice(capsys):
+    with mock.patch.object(builtins, 'input', lambda _: "242"):
+        _ = get_user_choice()
+        captured = capsys.readouterr()
+        assert captured.out == "You typed an invalid input. You lose\n"
+
+
 def test_mock():
-    with mock.patch.object(builtins, 'input', lambda _: 0):
+    with mock.patch.object(builtins, 'input', lambda _: "0"):
         assert get_user_choice() == 0
