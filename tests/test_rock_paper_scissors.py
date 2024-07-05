@@ -1,7 +1,10 @@
+import mock
+import builtins
 import sys
 sys.path.append("../src")
+print(sys.path)
 
-from src.rock_paper_scissors import *
+from src.pkg.rock_paper_scissors import *
 
 def test_is_rock():
     assert is_rock(0) == True
@@ -25,3 +28,7 @@ def test_is_equal():
     assert is_equal(0, 1) == False
     assert is_equal(0, 2) == False
     assert is_equal(1, 2) == False
+
+def test_mock():
+    with mock.patch.object(builtins, 'input', lambda _: 0):
+        assert get_user_choice() == 0
