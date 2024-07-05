@@ -26,7 +26,6 @@ def get_user_choice():
     choice = int(input(prompt))
     if is_invalid(choice):
         print("You typed an invalid input. You lose")
-        exit()
     return choice
 
 def main():
