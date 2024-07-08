@@ -74,44 +74,44 @@ def test_get_valid_user_choice():
 
 
 def test_find_winner_user_is_rock_computer_is_paper(capsys):
-    _ = find_winner(0, 1)
+    find_winner(0, 1)
     captured = capsys.readouterr()
     assert captured.out == "You lose\n"
 
 
 def test_find_winner_user_is_rock_computer_is_scissors(capsys):
-    _ = find_winner(0, 2)
+    find_winner(0, 2)
     captured = capsys.readouterr()
     assert captured.out == "You win!\n"
 
 
 def test_find_winner_user_is_paper_computer_is_rock(capsys):
-    _ = find_winner(1, 0)
+    find_winner(1, 0)
     captured = capsys.readouterr()
     assert captured.out == "You win!\n"
 
 
 def test_find_winner_user_is_paper_computer_is_scissor(capsys):
-    _ = find_winner(1, 2)
+    find_winner(1, 2)
     captured = capsys.readouterr()
     assert captured.out == "You lose\n"
 
 
 def test_find_winner_user_is_scissor_computer_is_rock(capsys):
-    _ = find_winner(2, 0)
+    find_winner(2, 0)
     captured = capsys.readouterr()
     assert captured.out == "You lose\n"
 
 
 def test_find_winner_user_is_scissor_computer_is_paper(capsys):
-    _ = find_winner(2, 1)
+    find_winner(2, 1)
     captured = capsys.readouterr()
     assert captured.out == "You win!\n"
 
 
 def test_find_winner_user_and_computer_equal(capsys):
-    _ = find_winner(0, 0)
-    _ = find_winner(1, 1)
-    _ = find_winner(2, 2)
+    find_winner(0, 0)
+    find_winner(1, 1)
+    find_winner(2, 2)
     captured = capsys.readouterr()
     assert captured.out == "It's a draw\nIt's a draw\nIt's a draw\n"
