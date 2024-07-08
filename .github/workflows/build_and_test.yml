@@ -42,3 +42,10 @@ jobs:
     - name: Generate Code Coverage information
       run: |
         coverage run --source src.pkg --module pytest --verbose tests && coverage report --show-missing
+
+    - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          verbose: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
