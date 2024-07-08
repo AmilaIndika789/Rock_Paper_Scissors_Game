@@ -1,4 +1,4 @@
-import random
+import secrets
 from src.pkg.ascii_art import rock, paper, scissors
 
 print("Welcome to the Rock Paper Scissor's Game!")
@@ -64,7 +64,7 @@ def main():
     print(game_images[users_choice])
 
     # Computer's Choice
-    computers_choice = random.randint(0, 2)
+    computers_choice = secrets.randbelow(3)
     print(f"Computer Chose: {computers_choice}")
     print(game_images[computers_choice])
 
