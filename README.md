@@ -14,7 +14,6 @@ A simple [Rock Paper Scissors](https://wrpsa.com/) game implemented using Python
     pip install -r requirements.txt
     ~~~
 
-
 2. Run the following command from the root directory
 
     ~~~zsh
