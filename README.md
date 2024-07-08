@@ -1,3 +1,5 @@
+![Build](https://github.com/AmilaIndika789/Rock_Paper_Scissors_Game/actions/workflows/build_and_test.yml/badge.svg?branch=main&event=push)
+
 [![codecov](https://codecov.io/gh/AmilaIndika789/Rock_Paper_Scissors_Game/graph/badge.svg?token=AQGALYRVOB)](https://codecov.io/gh/AmilaIndika789/Rock_Paper_Scissors_Game)
 
 # Rock Paper Scissors Game
