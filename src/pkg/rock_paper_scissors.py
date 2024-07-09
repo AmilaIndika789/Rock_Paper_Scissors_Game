@@ -7,27 +7,27 @@ print("Welcome to the Rock Paper Scissor's Game!")
 game_images = [rock, paper, scissors]
 
 
-def is_rock(choice):
+def is_rock(choice: int) -> bool:
     return choice == 0
 
 
-def is_paper(choice):
+def is_paper(choice: int) -> bool:
     return choice == 1
 
 
-def is_scissors(choice):
+def is_scissors(choice: int) -> bool:
     return choice == 2
 
 
-def is_equal(first_choice, second_choice):
+def is_equal(first_choice: int, second_choice: int) -> bool:
     return first_choice == second_choice
 
 
-def is_invalid(choice):
+def is_invalid(choice: int) -> bool:
     return choice not in [0, 1, 2]
 
 
-def get_user_choice():
+def get_user_choice() -> int:
     prompt = "What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n"
     choice = int(input(prompt))
     if is_invalid(choice):
@@ -35,7 +35,7 @@ def get_user_choice():
     return choice
 
 
-def find_winner(users_choice, computers_choice):
+def find_winner(users_choice: int, computers_choice: int) -> bool:
     if is_equal(users_choice, computers_choice):
         print("It's a draw")
     else:
