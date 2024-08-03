@@ -24,3 +24,7 @@ A simple [Rock Paper Scissors](https://wrpsa.com/) game implemented using Python
     ~~~bash
     coverage run --source src.pkg --module pytest --verbose tests
     ~~~
+
+## Example Usage
+
+![Image of using rock paper scissors game](images/rock_paper_scissors_usage.png)
